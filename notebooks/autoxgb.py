@@ -43,7 +43,7 @@ def optimize_params(X, y, params_space, validation_split=0.3, seed=42, cv=False)
 
     # Estimate XGB params
     def objective(_params):
-        _clf = XGBClassifier(n_estimators=10000,
+        _clf = XGBClassifier(n_estimators=100,
                              max_depth=int(_params['max_depth']),
                              learning_rate=_params['learning_rate'],
                              min_child_weight=_params['min_child_weight'],
